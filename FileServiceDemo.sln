@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FileServiceDemo", "FS\FileS
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FSUnitTest", "FSUnitTest\FSUnitTest.csproj", "{E7C292D5-976A-43C0-B2D4-CF81C4383117}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsFormsCli", "WindowsFormsCli\WindowsFormsCli.csproj", "{86A58484-9F64-44BD-9C7D-14FCB69BF200}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{E7C292D5-976A-43C0-B2D4-CF81C4383117}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E7C292D5-976A-43C0-B2D4-CF81C4383117}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E7C292D5-976A-43C0-B2D4-CF81C4383117}.Release|Any CPU.Build.0 = Release|Any CPU
+		{86A58484-9F64-44BD-9C7D-14FCB69BF200}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{86A58484-9F64-44BD-9C7D-14FCB69BF200}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{86A58484-9F64-44BD-9C7D-14FCB69BF200}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{86A58484-9F64-44BD-9C7D-14FCB69BF200}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
