@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
+using System.Web;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
@@ -54,6 +55,7 @@ namespace FS.Controllers
                 }
                 else
                 {
+                    fileName = HttpUtility.UrlDecode(fileName);
                     string fullName = Path.Combine(_path, fileName.Trim().Replace("/", "\\").TrimStart('\\'));
                     if (!System.IO.File.Exists(fullName))
                     {
@@ -94,7 +96,7 @@ namespace FS.Controllers
                 }
                 else
                 {
-                    fileName = fileName.Trim().Replace("/", "\\").TrimStart('\\');
+                    fileName = HttpUtility.UrlDecode(fileName).Trim().Replace("/", "\\").TrimStart('\\');
                     string fullName = Path.Combine(_path, fileName);
                     string name = Path.GetFileName(fileName);
                     if (System.IO.File.Exists(fullName))

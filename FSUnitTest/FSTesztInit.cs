@@ -36,7 +36,7 @@ namespace FSUnitTest
 
         protected async Task<HttpResponseMessage> Post(string fileName)
         {
-            string body = Convert.ToBase64String(Encoding.ASCII.GetBytes(fileName));
+            string body = Convert.ToBase64String(Encoding.UTF8.GetBytes(fileName));
             var content = new StringContent(body);
             var name = HttpUtility.UrlEncode(fileName);
             return await _client.PostAsync($"/api/dokumentumok/{name}", content);
@@ -49,6 +49,7 @@ namespace FSUnitTest
         [Theory]
         [InlineData("t1.txt")]
         [InlineData("f1\\t2.txt")]
+        [InlineData("ékezetes nevû.txt")]
         public async Task T01_EnsureDataAsync(string fileName)
         {
             var response = await Post(fileName);
@@ -103,6 +104,7 @@ namespace FSUnitTest
         [Theory]
         [InlineData("t1.txt")]
         [InlineData("f1\\t2.txt")]
+        [InlineData("ékezetes nevû.txt")]
         public async Task T02_Get_ValidFileAsync(string fileName)
         {
             var name = HttpUtility.UrlEncode(fileName);
